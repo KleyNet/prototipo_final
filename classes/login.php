@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Description of login
  *
@@ -50,6 +49,5 @@ class login extends conexao {
             header("location: http://localhost/prototipo_final/index.php/");
         endif;
     }
-
 }
 ?>
