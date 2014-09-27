@@ -54,8 +54,6 @@ $select = @mysql_select_db($banco);
              mysql_close();
              
              header("refresh: 3; url=cadastroTurma.php");
-                 
-             
         }   
     }
 ?>

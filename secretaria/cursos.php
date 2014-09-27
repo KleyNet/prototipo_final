@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+        <?php session_start(); ?>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Professor</title>
+	<?php include_once '../inc/head.php'; ?>
 
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/style.css" rel="stylesheet">
+	<title>Cursos</title>
+
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
 
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -15,7 +15,6 @@
 	<![endif]-->
 </head>
 <body>
-	
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container container-fluid">
 			<div class="navbar-header">
@@ -30,19 +29,20 @@
 
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="../professor/index.php">Home</a></li>
-                                        <li class="active"><a href="../professor/notasFrequencia.php">Notas</a></li>
-					<!--<li><a href="#">Frequência</a></li>-->
-					<li><a href="#">Relatório</a></li>
+					<li><a href="../secretaria/index.php">Home</a></li>
+					<li><a href="../secretaria/alunos.php">Alunos</a></li>
+					<li><a href="../secretaria/turmas.php">Turmas</a></li>
+					<li><a href="../secretaria/disciplinas.php">Disciplinas</a></li>
+					<li class="active"><a href="../secretaria/cursos.php">Cursos</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Usuário <span class="caret"></span></a>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><?php echo $_SESSION['perfil']; ?><span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-cog"></span>Editar Perfil</a></li>
 							<li class="divider"></li>
-							<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+                                                        <li><a href="../logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out"></span> Sair </a></li>
 						</ul>
 					</li>
 				</ul>
@@ -55,45 +55,52 @@
 			<div class="row">
 				<div id="conteudo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					<div class="page-header">
-						<h3><span class="glyphicon glyphicon-th-list"></span> Notas</h3>
+						<h3><span class="glyphicon glyphicon-th-list"></span> Cursos</h3>
 					</div>
 
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<a href="../professor/cadastrarNota.php"><button type="button" class="btn btn-success">Inserir Registros</button></a>
+                                                    <a href="../secretaria/cadastroCurso.php"><button type="button" class="btn btn-success">Novo Curso</button></a>
+						</div>
+					</div>
+                                    <hr>
+
+					<div class="row">
+						<div class="col-lg-4">
+							<input type="search" id="container-search" class="form-control" placeholder="Search...">
 						</div>
 					</div>
 
 					<div class="table-responsive">
-						<table class="table table-striped bordered">
+						<table class="table bordered">
 							<thead class="h4">
 								<tr>
-									<th>Nome</th>
-									<th>Disciplina</th>
-									<th>Nota</th>
-									<th>Frequência</th>
-									<th>Ação</th>
+									<th>Curso</th>
+									<th>Orientador</th>
+									<th>Tipo</th>
+									<th>Carga Horária</th>
+									<th></th>
 								</tr>
 							</thead>
 							<tbody class="h5">
 								<tr>
-									<td>Reuel Scarabele Cardoso</td>
-									<td>Trabalho de Conclusão de Curso II</td>
-									<td>6,0</td>
-									<td>%</td>
-									<td><button type="button" class="btn btn-warning btn-xs">Alterar Nota</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir Nota</button></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
 									<div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
 										<div class="modal-dialog modal-sm">
 											<div class="modal-content">
 												<div class="modal-header">
-													<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;<span class="sr-only">Sair</span></span></button>
+													<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
 												</div>
 												<div class="modal-body">
-													<p>Tem certeza que deseja remover os registros?</p>
+													<p>Tem certeza que deseja remover essa turma?</p>
 												</div>
 												<div class="modal-footer">
 													<button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-													<button type="button" class="btn btn-danger">Sim</button>
+													<button type="button.btn.btn-danger">Sim</button>
 												</div>
 											</div>
 										</div>
@@ -114,21 +121,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<footer class="navbar navbar-inverse navbar-fixed-bottom">
-		<div class="copyright">
-			<div class="container container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<p>&copy; Todos os direitos reservados</p>
-					</div>
+	</div>                      
 				</div>
 			</div>
 		</div>
-	</footer>
-	
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	</div>
+    <?php include_once '../inc/rodape.php'; ?>
 </body>
 </html>

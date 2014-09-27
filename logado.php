@@ -12,40 +12,37 @@ endif;
 <?php
 #var_dump($_SESSION);
 if (isset($_SESSION['logado'])):
-?>
-<?php
+    ?>
+    <?php
 else:
     echo '<h2>Você não tem permissão de acesso ao sistema SAD!</h2><hr><br /> <br />
                     <a href="javascript:history.back(1)">Voltar</a>';
-    #exit;
+#exit;
 endif;
-
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
-            <?php 
+    <?php
     session_start();
-            ?>
+    ?>
     <head>
-        <?php require_once './inc/head.php';?>
+        <?php require_once './inc/head.php'; ?>
         <title>Sistema de Apoio a Dependencia</title>
 
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link href=".../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container-fluid container">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="" class="navbar-brand">Logo</a>
+                    <a class="navbar-brand" href="">{Logo}</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -56,18 +53,17 @@ endif;
                         <li><a href="./coordenador/index.php">Coordenador</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
-                                                <?php echo $_SESSION['perfil']?> 
-                                                <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
-							<li class="divider"></li>
-
-							<li><a href="logado.php?logout=acessar"> Sair<span class="glyphicon glyphicon-log-out"></span></a></li>
-						</ul>
-					</li>
-				</ul>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
+                                <?php echo $_SESSION['perfil']; ?> 
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
+                                <li class="divider"></li>   
+                                <li><a href="logado.php?logout=acessar"> Sair<span class="glyphicon glyphicon-log-out"></span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -159,20 +155,7 @@ endif;
             </div>
         </div>
 
-        <footer class="navbar navbar-fixed-bottom">
-            <div class="copyright">
-                <div class="container container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <p>&copy; Todos os direitos reservados</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <?php include_once './inc/rodape.php'; ?>
 
     </body>
 </html>
