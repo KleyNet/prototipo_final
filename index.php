@@ -107,18 +107,19 @@ endif;
     </div>
 
     <footer class="navbar navbar-inverse navbar-fixed-bottom">
-        <div class="copyright">
-            <div class="container container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>&copy; Todos os direitos reservados</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+		<div class="copyright">
+			<div class="container container-fluid">
+			  <div class="row">
+				<div class="col-md-12">
+				  <p>&copy; Todos os direitos reservados</p>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</footer>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+
 </body>
 </html>

@@ -18,7 +18,7 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -42,6 +42,8 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['perfil']; ?> <span class="caret"></span></a>
 						<ul class="dropdown-menu">
+							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
+							<li class="divider"></li>
 							<li><a href="logado.php?logout=acessar">Sair <span class="glyphicon glyphicon-log-out"></span></a></li>
 						</ul>
 					</li>
@@ -69,7 +71,7 @@
 							<thead class="h4">
 								<tr>
 									<th>Código</th>
-									<th>Disciplina <span class="glyphicon glyphicon-search"></span></th>
+									<th>Disciplina <span id="pesquisa" style="color:black; cursor:pointer;"><span class="glyphicon glyphicon-search"></span></span></th>
 									<th>Professor</th>
 									<th>Situação</th>
 									<th>Ação</th>
@@ -115,21 +117,6 @@
 			</div>
 		</div>
 	</div>
-
-	<footer class="navbar navbar-fixed-bottom">
-		<div class="copyright">
-			<div class="container container-fluid">
-			  <div class="row">
-				<div class="col-md-12">
-				  <p>&copy; Todos os direitos reservados</p>
-				</div>
-			  </div>
-			</div>
-		</div>
-	</footer>
-	
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-
+	<?php include_once '../inc/rodape.php'; ?>
 </body>
 </html>

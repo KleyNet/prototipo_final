@@ -17,7 +17,7 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -31,7 +31,8 @@
 
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<ul class="nav navbar-nav">
-                                    <li class="active"><a href="../logado.php">Home</a></li>
+
+                                    <li class="active"><a href="../secretaria/index.php">Home</a></li>
 					<li><a href="../secretaria/alunos.php">Alunos</a></li>
 					<li><a href="../secretaria/turmas.php">Turmas</a></li>
 					<li><a href="../secretaria/disciplinas.php">Disciplinas</a></li>

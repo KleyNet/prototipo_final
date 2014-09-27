@@ -18,7 +18,7 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -32,6 +32,7 @@
 
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<ul class="nav navbar-nav">
+
 					<li><a href="../secretaria/index.php">Home</a></li>
 					<li><a href="../secretaria/alunos.php">Alunos</a></li>
 					<li class="active"><a href="../secretaria/turmas.php">Turmas</a></li>
@@ -42,6 +43,9 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['perfil']; ?> <span class="caret"></span></a>
 						<ul class="dropdown-menu">
+							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
+							<li class="divider"></li>
+
                                                     <li><a href="../logado.php?logout=acessar">Sair <span class="glyphicon glyphicon-log-out"></span></a></li>
 						</ul>
 					</li>
@@ -68,7 +72,7 @@
 						<table class="table table-striped bordered">
 							<thead class="h4">
 								<tr>
-									<th>Nome <span class="glyphicon glyphicon-search"></span></th>
+									<th>Nome <span id="pesquisa" style="color:black; cursor:pointer;"><span class="glyphicon glyphicon-search"></span></span></th>
 									<th>Professor</th>
 									<th>Turma Ativa</th>
 									<th>Ação</th>
@@ -99,9 +103,8 @@
 								</tr>
 							</tbody>
 						</table>
-					</div>
-
-					<div class="text-center">
+                                        </div>
+                                    <div class="text-center">
 						<ul class="pagination pagination-large">
 							<li class="disabled"><a href="#">&laquo;</a></li>
 							<li class="active"><a href="#">1</a></li>
@@ -113,21 +116,17 @@
 			</div>
 		</div>
 	</div>
-
-	<footer class="navbar navbar-fixed-bottom">
-		<div class="copyright">
-			<div class="container container-fluid">
-			  <div class="row">
-				<div class="col-md-12">
-				  <p>&copy; Todos os direitos reservados</p>
-				</div>
-			  </div>
-			</div>
-		</div>
-	</footer>
-	
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<?php include_once '../inc/rodape.php';  ?>
+    
+    <script>
+		$('#pesquisa').popover({
+			container: 'body',
+			html: true,
+			template: '<div class="popover"><div class="arrow"></div><div class="popover-content"></div></div>',
+			content: '<div class="input-group"><input type="text" class="form-control" /><span class="input-group-btn"><button class="btn btn-danger" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div><span class="glyphicon glyphicon-remove-sign" style="display: none;"></span>',
+			placement: 'right',
+		});
+	</script>
 
 </body>
 </html>

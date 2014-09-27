@@ -18,7 +18,7 @@
 </head>
 <body>
 
-	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -32,6 +32,7 @@
 
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<ul class="nav navbar-nav">
+
 					<li><a href="../secretaria/index.php">Home</a></li>
 					<li class="active"><a href="../secretaria/alunos.php">Alunos</a></li>
 					<li><a href="../secretaria/turmas.php">Turmas</a></li>
@@ -42,6 +43,9 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['perfil']; ?> <span class="caret"></span></a>
 						<ul class="dropdown-menu">
+							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
+							<li class="divider"></li>
+
 							<li><a href="../logado.php?logout=acessar">Sair <span class="glyphicon glyphicon-log-out"></span></a></li>
 						</ul>
 					</li>
@@ -63,31 +67,21 @@
 							<a href="../secretaria/cadastroAluno.php"><button type="button" class="btn btn-success">Novo Aluno</button></a>
 						</div>
 					</div>
-
-					<div class="table-responsive">
+							<div class="table-responsive">
 						<table class="table table-striped bordered">
 							<thead class="h4">
 								<tr>
-									<th id="name">
-										<span id="nameHeader" style="cursor:pointer;">Nome</span>
-										<span id="nameCaret" class="caret" style="display:none;"></span>
-										<span id="namePesquisarIcon" class="glyphicon glyphicon-search"></span>
-										<div id="namePesquisarDiv" class="hide">
-											<div class="input-group">
-												<input type="text" id="nameInput" class="form-control" />
-												<span class="input-group-btn">
-													<button id="nameApagarPesquisa" class="btn btn-default" type="button" onclick="removerFiltro('nome')"><span class="glyphicon glyphicon-remove"></span></button>
-												</span>
-											</div>
-										</div>
-										<span id="nameApagarPesquisaIcon" class="glyphicon glyphicon-remove-sign" style="display:none;"></span>
-									</th>
+									<th>Nome <span id="pesquisa" style="color:black; cursor:pointer;"><span class="glyphicon glyphicon-search"></span></span></th>
+									<th>RA</th>
+									<th>Disciplina</th>
 									<th>Ação</th>
 								</tr>
 							</thead>
 							<tbody class="h5">
 								<tr>
 									<td>Reuel Scarabele Cardoso</td>
+									<td>1158387827</td>
+									<td>Trabalho de Conclusão de Curso II</td>
 									<td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
 									<div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
 										<div class="modal-dialog modal-sm">
@@ -123,7 +117,7 @@
 		</div>
 	</div>
 
-	<footer class="navbar navbar-fixed-bottom">
+	<footer class="navbar navbar-inverse navbar-fixed-bottom">
 		<div class="copyright">
 			<div class="container container-fluid">
 			  <div class="row">
@@ -138,5 +132,14 @@
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 
+	<script>
+		$('#pesquisa').popover({
+			container: 'body',
+			html: true,
+			template: '<div class="popover"><div class="arrow"></div><div class="popover-content"></div></div>',
+			content: '<div class="input-group"><input type="text" class="form-control" /><span class="input-group-btn"><button class="btn btn-danger" type="button"><span class="glyphicon glyphicon-remove"></span></button></span></div><span class="glyphicon glyphicon-remove-sign" style="display: none;"></span>',
+			placement: 'right',
+		});
+	</script>
 </body>
 </html>
