@@ -17,9 +17,9 @@ $select = mysql_select_db($banco);
     {
         $sql = "INSERT INTO perfil (nome, tipo, cpf, senha, entrada) VALUES(";
         $sql .= "'".$_REQUEST["nome"]."',";
-        $sql .= "'".$_REQUEST['tipo']."',";
+        $sql .= "'".$_REQUEST["optionPerfil"]."',";
         $sql .= "'".$_REQUEST['cpf']."',";
-        $sql .= "'".md5($_REQUEST['senha'])."',";
+        $sql .= "'".md5($_REQUEST["pass"])."',";
         $sql .= "'".$_REQUEST['data']."'";
         $sql .= ")";
         
@@ -34,7 +34,7 @@ $select = mysql_select_db($banco);
             echo '<h2>Cadastrado com sucesso!<hr></h2>';
                 mysql_close();
                 
-                header("refresh: 3; url=cadastro.php");
+                header("refresh: 3; url=cadastroUsuario.php");
         }   
     }
 ?>

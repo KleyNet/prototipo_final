@@ -5,8 +5,8 @@
 	<?php require_once '../inc/head.php'; ?>
 	<title>Alunos</title>
 
-	<link rel="stylesheet" href="../css/bootstrap.css">
-	<link rel="stylesheet" href="../css/style.css">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
 
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -14,7 +14,7 @@
 	<![endif]-->
 </head>
 <body>
-	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -40,7 +40,7 @@
                                                     <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
 							<li class="divider"></li>
                                                         
-                                                        <li><a href="../logado.php?logout=acessar">Sair <span class="glyphicon glyphicon-log-out"></span></a></li>
+                                                        <li><a href="../logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out"> Sair</span></a></li>
 						</ul>
 					</li>
 				</ul>
@@ -61,6 +61,15 @@
 							<a href="../coordenador/cadastroAluno.php"><button type="button" class="btn btn-success">Novo Aluno</button></a>
 						</div>
 					</div>
+                                    
+                                    <hr>
+
+					<div class="row">
+						<div class="col-lg-4">
+							<input type="search" id="container-search" class="form-control" placeholder="Search...">
+						</div>
+					</div>
+
 
 					<div class="table-responsive">
 						<table class="table table-striped bordered">
@@ -121,5 +130,17 @@
 		</div>
 	</div>
 <?php require_once '../inc/rodape.php'; ?>
+    <script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery-searchable.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+
+	<script>
+		$(function() {
+			$( '#table' ).searchable({
+				searchField: '#container-search',
+			})
+		})
+	</script>
+
 </body>
 </html>

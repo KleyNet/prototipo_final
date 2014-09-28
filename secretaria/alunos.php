@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <?php session_start(); ?>
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <?php include_once '../inc/head.php'; ?>
 
         <title>Dados Alunos</title>
 
-        <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel="stylesheet" href="../css/style.css">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
 
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+        
     </head>
     <body>
-
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container-fluid container">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
@@ -27,12 +25,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand">{Logo}</a>
+                    <a href="" class="navbar-brand">{Logo}</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-
                         <li><a href="../secretaria/index.php">Home</a></li>
                         <li class="active"><a href="../secretaria/alunos.php">Alunos</a></li>
                         <li><a href="../secretaria/turmas.php">Turmas</a></li>
@@ -52,7 +49,7 @@
                 </div>
             </div>
         </div>
-
+    </nav>
         <div class="wrapper" role="main">
             <div class="container-fluid container">
                 <div class="row">
@@ -153,22 +150,8 @@
                 </div>
             </div>
         </div>
-            <footer class="navbar navbar-inverse navbar-fixed-bottom">
-    <div class="copyright">
-        <div class="container container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>&copy; Todos os direitos reservados</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-	<script src="../js/jquery.min.js"></script>
-	<script src="//rawgithub.com/stidges/jquery-searchable/master/dist/jquery.searchable-1.0.0.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-            
-            <script>
+        <?php include_once '../inc/rodape.php'; ?>
+        <script>
             $(function() {
                 $('#table').searchable({
                     searchField: '#container-search',

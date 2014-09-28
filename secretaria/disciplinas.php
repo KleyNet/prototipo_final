@@ -36,6 +36,7 @@
 					<li><a href="../secretaria/alunos.php">Alunos</a></li>
 					<li><a href="../secretaria/turmas.php">Turmas</a></li>
 					<li class="active"><a href="../secretaria/disciplinas.php">Disciplinas</a></li>
+                                        <li class="active"><a href="../secretaria/cursos.php">Curso</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -63,6 +64,12 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<a href="../secretaria/cadastroTurma.php"><button type="button" class="btn btn-success">Nova Disciplina</button></a>
+						</div>
+					</div>
+                                    <hr>
+                                    <div class="row">
+						<div class="col-lg-4">
+							<input type="search" id="container-search" class="form-control" placeholder="Search...">
 						</div>
 					</div>
 
@@ -118,5 +125,13 @@
 		</div>
 	</div>
 	<?php include_once '../inc/rodape.php'; ?>
+    
+    <script>
+		$(function() {
+			$( '#table' ).searchable({
+				searchField: '#container-search',
+			})
+		});
+</script>
 </body>
 </html>
