@@ -7,17 +7,6 @@
         <link rel="stylesheet" href="../css/bootstrap.css">
         <link rel="stylesheet" href="../css/style.css">
 
-        <script>
-            //adiciona mascara ao CPF
-            function formatar(mascara, documento) {
-                var i = documento.value.length;
-                var saida = mascara.substring(0, 1);
-                var texto = mascara.substring(i);
-                if (texto.substring(0, 1) != saida) {
-                    documento.value += texto.substring(0, 1);
-                }
-            }
-        </script>
     </head>
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -33,12 +22,13 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">Menu 1</a></li>
-                        <li><a href="#">Menu 2</a></li>
-                        <li><a href="#">Menu 3</a></li>
-                        <li><a href="#">Menu 4</a></li>
-                    </ul>
+				<ul class="nav navbar-nav">
+					<li><a href="../coordenador/index.php">Home</a></li>
+					<li><a href="../coordenador/alunos.php">Alunos</a></li>
+					<li><a href="../coordenador/turmas.php">Turmas</a></li>
+					<li><a href="../coordenador/disciplinas.php">Disciplinas</a></li>
+					<li><a href="../coordenador/usuarios.php">Usuários</a></li>
+				</ul>
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -75,7 +65,7 @@
                                     <div class="form-group">
                                         <label for="inputsenha" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Gerador de Senha</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" value="<?php echo  $gerar = geraSenha(8, TRUE, FALSE); ?>"  name="senha" />
+                                            <input type="text" class="form-control" value="<?php echo $gerar = geraSenha(8, TRUE, FALSE); ?>"  name="senha" />
                                         </div>
                                     </div>
                                     <div class="form-group">
