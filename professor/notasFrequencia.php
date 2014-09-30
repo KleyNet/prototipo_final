@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <?php session_start(); ?>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<?php include_once '../inc/head.php'; ?>
 	<title>Professor</title>
 
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +14,6 @@
 	<![endif]-->
 </head>
 <body>
-	
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container container-fluid">
 			<div class="navbar-header">
@@ -38,11 +36,11 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Usuário <span class="caret"></span></a>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"> <?php echo $_SESSION['perfil']; ?></span> <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
 							<li class="divider"></li>
-							<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+                                                        <li><a href="../logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
 						</ul>
 					</li>
 				</ul>
