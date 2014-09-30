@@ -22,9 +22,7 @@ endif;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-    <?php
-    session_start();
-    ?>
+    <?php session_start(); ?>
     <head>
         <?php require_once './inc/head.php'; ?>
         <title>Sistema de Apoio a Dependencia</title>
@@ -54,13 +52,11 @@ endif;
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
-                                <?php echo $_SESSION['perfil']; ?> 
-                                <span class="caret"></span></a>
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['perfil']; ?> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
                                 <li class="divider"></li>   
-                                <li><a href="logado.php?logout=acessar"> Sair<span class="glyphicon glyphicon-log-out"></span></a></li>
+                                <li><a href="logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out"> Sair </span></a></li>
                             </ul>
                         </li>
                     </ul>
@@ -80,18 +76,17 @@ endif;
                             <div class="col-md-10">
                                 <button type="button" class="btn btn-success">Cadastrar Turma</button>
                             </div>
+                            <hr>
 
-                            <div class="col-md-2">
-                                <ul class="pagination">
-                                    <li><a href="#">&laquo;</a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">&raquo;</a></li>
-                                </ul>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <input type="search" id="container-search" class="form-control" placeholder="Search...">
+                                </div>
                             </div>
+
                         </div>
 
-                        <div class="clearfix"></div>
+                         <div class="clearfix"></div>
 
                         <div class="table-responsive">
                             <table class="table table-striped bordered">
@@ -123,7 +118,7 @@ endif;
                                                 <p>Tem certeza que deseja remover essa turma?</p>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">NÃ£o</button>
                                                 <button type="button" class="btn btn-danger">Sim</button>
                                             </div>
                                         </div>
@@ -131,12 +126,12 @@ endif;
                                 </div>
                                 </tr>
                                 </tbody>
-                                <tbody class="h5">
+                                <!--<tbody class="h5">
                                     <tr>
                                         <td></td>
                                         <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs">Excluir</button></td>
                                     </tr>
-                                </tbody>
+                                </tbody> -->
                             </table>
                         </div>
 
@@ -156,6 +151,5 @@ endif;
         </div>
 
         <?php include_once './inc/rodape.php'; ?>
-
     </body>
 </html>
