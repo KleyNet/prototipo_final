@@ -2,10 +2,7 @@
 <html lang="pt">
      <?php session_start(); ?>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<?php include_once '../inc/head.php'; ?>
 	<title>Disciplinas</title>
 
 	<link rel="stylesheet" href="../css/bootstrap.css">
@@ -18,7 +15,7 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-reverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -63,7 +60,7 @@
 
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<a href="../secretaria/cadastroTurma.php"><button type="button" class="btn btn-success">Nova Disciplina</button></a>
+                                                    <a href="../secretaria/cadastrodisciplina.php"><button type="button" class="btn btn-success">Nova Disciplina</button></a>
 						</div>
 					</div>
                                     <hr>
@@ -125,7 +122,6 @@
 		</div>
 	</div>
 	<?php include_once '../inc/rodape.php'; ?>
-    
     <script>
 		$(function() {
 			$( '#table' ).searchable({

@@ -48,7 +48,7 @@ $select = @mysql_select_db($banco);
         }
         else
         {
-            
+           
              echo'<h2>Cadastrado com sucesso!<hr></h2>';
              
              mysql_close();

@@ -2,10 +2,7 @@
 <html lang="pt-BR">
     <?php session_start(); ?>
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <?php include_once '../inc/head.php'; ?>
         <title>Cadastro de Curso</title>
 
         <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -31,11 +28,11 @@
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="../secretaria/index.php">Home</a></li>
-                        <li><a href="../secreataria/alunos.php">Alunos</a></li>
-                        <li><a href="../secretaria/turmas.php">Turmas</a></li>
-                        <li><a href="../secretaria/disciplinas.php">Disciplinas</a></li>
-                        <li><a href="../secretaria/cursos.php">Cursos</a></li>
+                        <li><a href="../coordenador/index.php">Home</a></li>
+                        <li><a href="../coordenador/alunos.php">Alunos</a></li>
+                        <li><a href="../coordenador/turmas.php">Turmas</a></li>
+                        <li><a href="../coordenador/disciplinas.php">Disciplinas</a></li>
+                        <li><a href="../coordenador/Curso.php">Cursos</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">

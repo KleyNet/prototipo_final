@@ -62,7 +62,7 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
-                                        <label for="inputCod" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Código Disciplina:</label>
+                                        <label for="inputCod" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Protocolo:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
                                             <input type="text" class="form-control" id="inputCod" required>
                                         </div>
@@ -76,9 +76,9 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="inputCarga" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Carga Horária:</label>
-                                        <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" id="inputCarga" required>
+                                        <label for="numberCarga" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Carga Horária:</label>
+                                        <div class="col-xs-6 col-sm-5 col-md-7 col-lg-5">
+                                            <input type="number" name="ch" class="form-control" id="inputCarga" required>
                                         </div>
                                     </div>
 
@@ -88,12 +88,11 @@
                                             <input type="text" class="form-control" id="inputPeriodo" required>
                                         </div>
                                     </div>
-
                                     <div class="form-group">
                                         <label for="selectSerie" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Série:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
                                             <select name="selectSerie" id="selectSerie" class="form-control" required>
-                                                <option value=""></option>
+                                                <option value="">Selecione</option>
                                                 <option value="1">1º</option>
                                                 <option value="2">2º</option>
                                                 <option value="3">3º</option>
@@ -111,7 +110,7 @@
                                         <label for="selectDependencia" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Dependência:</label>
                                         <div class="col-xs-6-col-sm-10 col-md-11 col-lg-10">
                                             <select name="selectDependencia" id="selectDependencia" class="form-control" required>
-                                                <option value=""></option>
+                                                <option value="">Selecione</option>
                                                 <option value="rdr">RDR</option>
                                                 <option value="str">STR</option>
                                                 <option value="gtr">GTR</option>
@@ -125,15 +124,18 @@
                                         <label for="inputProfessor" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Professor:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
                                             <select name="selectProfessor" id="selectProfessor" class="form-control" required>
-                                                <option></option>
-                                                <option>Guilherme Costa</option>
-                                                <option>Fernando Gonçalves</option>
-                                                <option>Wesley Tschiedel</option>
-                                                <option>Welton Dias</option>
+                                                <option value="">Selecione</option>
+                                                <option value="Guilerme Costa">Guilherme Costa</option>
+                                                <option value="Fernando Goncalves">Fernando Gonçalves</option>
+                                                <option value="Wesley Tschiedel">Wesley Tschiedel</option>
+                                                <option value="Welton Dias">Welton Dias</option>
+                                                <option value="Rodrigo Porto">Rodrigo Porto</option>
+                                                <option value="Daniel Dantas">Daniel Dantas</option>
+                                                <option value="Jane">Jane</option>
+                                                <option value="Cíntia">Cíntia</option>
                                             </select>
                                         </div>
                                     </div>
-
                                     <div class="pull-right">
                                         <button type="button" class="btn btn-success">Cadastrar</button>
                                         <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
@@ -145,7 +147,6 @@
                 </div>
             </div>
         </div>
-
         <?php require_once '../inc/rodape.php'; ?>
     </body>
 </html>
