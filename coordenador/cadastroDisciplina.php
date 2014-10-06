@@ -93,15 +93,15 @@
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
                                             <select name="selectSerie" id="selectSerie" class="form-control" required>
                                                 <option value="">Selecione</option>
-                                                <option value="1">1º</option>
-                                                <option value="2">2º</option>
-                                                <option value="3">3º</option>
-                                                <option value="4">4º</option>
-                                                <option value="5">5º</option>
-                                                <option value="6">6º</option>
-                                                <option value="7">7º</option>
-                                                <option value="8">8º</option>
-                                                <option value="9">9º</option>
+                                                <option value="1°">1º</option>
+                                                <option value="2°">2º</option>
+                                                <option value="3°">3º</option>
+                                                <option value="4°">4º</option>
+                                                <option value="5°">5º</option>
+                                                <option value="6°">6º</option>
+                                                <option value="7°">7º</option>
+                                                <option value="8°">8º</option>
+                                                <option value="9°">9º</option>
                                             </select>
                                         </div>
                                     </div>

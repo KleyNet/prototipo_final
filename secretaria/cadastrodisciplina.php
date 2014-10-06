@@ -57,27 +57,27 @@
                             <h3><span class="glyphicon glyphicon-th-list"></span> Cadastro de Disciplina</h3>
                         </div>
 
-                        <form method="post" action="" class="form-horizontal" role="form">
+                        <form method="post" action="banksdisciplina.php?acao=add" class="form-horizontal" role="form">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="inputCod" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Protocolo:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" id="inputCod" required>
+                                            <input type="text" name="codigo" class="form-control" id="inputCod" required="">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="inputDisciplina" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Disciplina:</label>
                                         <div class="col-xs-6  col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" id="inputDisciplina" required>
+                                            <input type="text" name="disciplina" class="form-control" id="inputDisciplina" required="">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="numberCarga" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Carga Horária:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="number" name="ch" class="form-control" id="inputCarga" required>
+                                            <input type="number" name="ch" class="form-control" id="inputCarga" required="">
                                         </div>
                                     </div>
                                     <!--
@@ -109,7 +109,7 @@
                                     <div class="form-group">
                                         <label for="selectDependencia" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Dependência:</label>
                                         <div class="col-xs-6-col-sm-10 col-md-11 col-lg-10">
-                                            <select name="selectDependencia" id="selectDependencia" class="form-control" required>
+                                            <select name="selectDependencia" id="selectDependencia" class="form-control" required="">
                                                 <option value="">Selecione</option>
                                                 <option value="rdr">RDR</option>
                                                 <option value="str">STR</option>
@@ -123,7 +123,7 @@
                                     <div class="form-group">
                                         <label for="inputProfessor" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Professor:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <select name="selectProfessor" id="selectProfessor" class="form-control" required>
+                                            <select name="selectProfessor" id="selectProfessor" class="form-control" required="">
                                                 <option value="">Selecione</option>
                                                 <option value="Guilerme Costa">Guilherme Costa</option>
                                                 <option value="Fernando Goncalves">Fernando Gonçalves</option>
@@ -138,7 +138,7 @@
                                     </div>
 
                                     <div class="pull-right">
-                                        <button type="button" class="btn btn-success">Cadastrar</button>
+                                        <button type="submit" class="btn btn-success">Cadastrar</button>
                                         <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
                                     </div>
                                 </div>

@@ -15,8 +15,8 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-reverse navbar-fixed-top" role="navigation">
-		<div class="container-fluid container">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
 					<span class="sr-only">Toggle Navigation</span>
@@ -63,8 +63,10 @@
                                                     <a href="../secretaria/cadastrodisciplina.php"><button type="button" class="btn btn-success">Nova Disciplina</button></a>
 						</div>
 					</div>
-                                    <hr>
-                                    <div class="row">
+
+					<hr>
+
+					<div class="row">
 						<div class="col-lg-4">
 							<input type="search" id="container-search" class="form-control" placeholder="Search...">
 						</div>
@@ -75,7 +77,7 @@
 							<thead class="h4">
 								<tr>
 									<th>Código</th>
-									<th>Disciplina <span id="pesquisa" style="color:black; cursor:pointer;"><span class="glyphicon glyphicon-search"></span></span></th>
+									<th>Disciplina</th>
 									<th>Professor</th>
 									<th>Situação</th>
 									<th>Ação</th>
@@ -121,6 +123,7 @@
 			</div>
 		</div>
 	</div>
+
 	<?php include_once '../inc/rodape.php'; ?>
     <script>
 		$(function() {
