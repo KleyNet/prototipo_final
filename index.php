@@ -29,6 +29,9 @@ endif;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Sistema de Apoio a Dependência">
+
+    <title>SAD - Sistema de Apoio a Dependência</title>
+
     <script type="text/javascript">
         //adiciona mascara a telefone 
         function formatar(mascara, documento) {

@@ -28,10 +28,11 @@
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="../coordenador/index.php">Home</a></li>
-                        <li class="active"><a href="../coordenador/alunos.php">Alunos</a></li>
-                        <li><a href="../coordenador/turmas.php">Turmas</a></li>
-                        <li><a href="../coordenador/disciplinas.php">Disciplinas</a></li>
-                        <li><a href="../coordenador/usuarios.php">Usuários</a></li>
+                    <li class="active"><a href="../coordenador/alunos.php">Alunos</a></li>
+                    <li><a href="../coordenador/turmas.php">Turmas</a></li>
+                    <li><a href="../coordenador/disciplinas.php">Disciplinas</a></li>
+                    <li><a href="../coordenador/cursos.php">Cursos</a></li>
+                    <li><a href="../coordenador/usuarios.php">Usuários</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -70,48 +71,40 @@
                         </div>
 
 
-                        <div class="table-responsive">
-                            <table class="table table-striped bordered">
+                        <div class="table-responsive" id="table">
+                            <table class="table bordered">
                                 <thead class="h4">
                                     <tr>
-                                        <th id="name">
-                                            <span id="nameHeader" style="cursor:pointer;">Nome</span>
-                                            <span id="nameCaret" class="caret" style="display:none;"></span>
-                                            <span id="namePesquisarIcon" class="glyphicon glyphicon-search"></span>
-                                <div id="namePesquisarDiv" class="hide">
-                                    <div class="input-group">
-                                        <input type="text" id="nameInput" class="form-control" />
-                                        <span class="input-group-btn">
-                                            <button id="nameApagarPesquisa" class="btn btn-default" type="button" onclick="removerFiltro('nome')"><span class="glyphicon glyphicon-remove"></span></button>
-                                        </span>
-                                    </div>
-                                </div>
-                                <span id="nameApagarPesquisaIcon" class="glyphicon glyphicon-remove-sign" style="display:none;"></span>
-                                </th>
-                                <th>Ação</th>
-                                </tr>
+                                        <th>Nome</th>
+                                        <th>RA</th>
+                                        <th>Disciplina</th>
+                                        <th></th>
+                                    </tr>
                                 </thead>
+
                                 <tbody class="h5">
                                     <tr>
                                         <td>Reuel Scarabele Cardoso</td>
-                                        <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                    <div class="modal-dialog modal-sm">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Tem certeza que deseja remover esse aluno?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                <button type="button" class="btn btn-danger">Sim</button>
+                                        <td>1158387827</td>
+                                        <td>Trabalho de Conclusão de Curso II</td>
+                                        <td><a href="../coordenador/editarAluno.php" type="button" class="btn btn-warning btn-xs">Alterar</a> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
+                                        <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Tem certeza que deseja remover esse aluno?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                                                        <button type="button" class="btn btn-danger">Sim</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                </tr>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

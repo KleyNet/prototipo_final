@@ -29,12 +29,12 @@
 
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<ul class="nav navbar-nav">
-
-                                    <li class="active"><a href="../logado.php">Home</a></li>
+                    <li class="active"><a href="../coordenador/index.php">Home</a></li>
 					<li><a href="../coordenador/alunos.php">Alunos</a></li>
 					<li><a href="../coordenador/turmas.php">Turmas</a></li>
 					<li><a href="../coordenador/disciplinas.php">Disciplinas</a></li>
-                                        <li><a href="../coordenador/usuarios.php">Usuários</a></li>
+					<li><a href="../coordenador/cursos.php">Cursos</a></li>
+					<li><a href="../coordenador/usuarios.php">Usuários</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
