@@ -12,7 +12,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-        
+
     </head>
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -49,113 +49,84 @@
             </div>
         </div>
     </nav>
-        <div class="wrapper" role="main">
-            <div class="container-fluid container">
-                <div class="row">
-                    <div id="conteudo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="page-header">
-                            <h3><span class="glyphicon glyphicon-th-list"></span> Alunos Cadastrados</h3>
-                        </div>
+    <div class="wrapper" role="main">
+        <div class="container-fluid container">
+            <div class="row">
+                <div id="conteudo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="page-header">
+                        <h3><span class="glyphicon glyphicon-th-list"></span> Alunos Cadastrados</h3>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <a href="../secretaria/cadastroAluno.php"><button type="button" class="btn btn-success">Novo Aluno</button></a>
-                            </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <a href="../secretaria/cadastroAluno.php"><button type="button" class="btn btn-success">Novo Aluno</button></a>
                         </div>
-                        <hr>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <input type="search" id="container-search" class="form-control" placeholder="Search...">
-                            </div>
-                        </div>
+                    <hr>
 
-                        <div class="table-responsive" id="table">
-                            <table class="table bordered">
-                                <thead class="h4">
-                                    <tr>
-                                        <th>Nome</th>
-                                        <th>RA</th>
-                                        <th>Disciplina</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody class="h5">
-                                    <tr>
-                                        <td>Reuel Scarabele Cardoso</td>
-                                        <td>1158387827</td>
-                                        <td>Trabalho de Conclusão de Curso II</td>
-                                        <td><button type="button" class="btn btn-warning btn-xs">Alterar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                    <tr>
-                                        <td>Fernando de Jesus Ribeiro</td>
-                                        <td>2547450767</td>
-                                        <td>Trabalho de Conclusão de Curso II</td>
-                                        <td><button type="button" class="btn btn-warning btn-xs">Alterar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                    <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                        <div class="modal-dialog modal-sm">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>Tem certeza que deseja remover esse aluno?</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                    <button type="button" class="btn btn-danger">Sim</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </tr>
-                                    </tbody>
-                                    <tbody class="h5">
-                                        <tr>
-                                            <td>Thiago Couto Godoy</td>
-                                            <td>1183386900</td>
-                                            <td>Trabalho de Conclusão de Curso II</td>
-                                            <td><button type="button" class="btn btn-warning btn-xs">Alterar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                    <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                        <div class="modal-dialog modal-sm">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>Tem certeza que deseja remover esse aluno?</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                    <button type="button" class="btn btn-danger">Sim</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </tr>
-                                    </tbody>
-                            </table>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <input type="search" id="container-search" class="form-control" placeholder="Pesquisar...">
                         </div>
+                    </div>
 
-                        <div class="text-center">
-                            <ul class="pagination pagination-large">
-                                <li class="disabled"><a href="#">&laquo;</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">&raquo;</a></li>
-                            </ul>
-                        </div>
+                    <div class="table-responsive" id="table">
+                        <table class="table bordered">
+                            <thead class="h4">
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>RA</th>
+                                    <th>Disciplina</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="h5">
+                                <tr>
+                                    <td>Reuel Scarabele Cardoso</td>
+                                    <td>1158387827</td>
+                                    <td>Trabalho de Conclusão de Curso II</td>
+                                    <td><button type="button" class="btn btn-warning btn-xs">Alterar</button>
+                                </tr>
+                            </tbody>
+                            <tbody class="h5">
+                                <tr>
+                                    <td>Fernando de Jesus Ribeiro</td>
+                                    <td>2547450767</td>
+                                    <td>Trabalho de Conclusão de Curso II</td>
+                                    <td><button type="button" class="btn btn-warning btn-xs">Alterar</button>
+                                </tr>
+                            </tbody>
+                            <tbody class="h5">
+                                <tr>
+                                    <td>Thiago Couto Godoy</td>
+                                    <td>1183386900</td>
+                                    <td>Trabalho de Conclusão de Curso II</td>
+                                    <td><button type="button" class="btn btn-warning btn-xs">Alterar</button>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="text-center">
+                        <ul class="pagination pagination-large">
+                            <li class="disabled"><a href="#">&laquo;</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <?php include_once '../inc/rodape.php'; ?>
+    </div>
         <script>
-            $(function() {
-                $('#table').searchable({
-                    searchField: '#container-search',
-                })
+        $(function() {
+            $('#table').searchable({
+                searchField: '#container-search'
             });
-        </script>
-    </body>
+        });
+    </script>
+    <?php include_once '../inc/rodape.php'; ?>
+</body>
 </html>

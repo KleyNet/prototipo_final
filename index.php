@@ -71,7 +71,7 @@ endif;
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <div class="panel-title">Login</div>
-                        <div style="float:right; font-size:80%; position:relative; top:-10px;"><a href="#">Esqueceu a senha?</a></div>
+                        <div style="float:right; font-size:80%; position:relative; top:-10px;"><a href="alter.php">Esqueceu a senha?</a></div>
                     </div>
 
                     <div style="padding-top:30px;" class="panel-body">

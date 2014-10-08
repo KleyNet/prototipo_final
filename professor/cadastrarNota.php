@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
     <?php session_start(); ?>
@@ -32,7 +31,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="../professor/index.php">Home</a></li>
                         <li><a href="../professor/notasFrequencia.php">Notas</a></li>
-                        <li><a href="#">Frequência</a></li>
+                        <li><a href="">Frequência</a></li>
                         <li><a href="#">Relatório</a></li>
                     </ul>
 
@@ -130,7 +129,7 @@
                                     </div>
 
                                     <div class="pull-right">
-                                        <button type="button" class="btn btn-success">Cadastrar</button>
+                                        <button type="submit" class="btn btn-success">Cadastrar</button>
                                         <a href="javascript:window.history.go(-1)"><button type="button" class="btn btn-warning">Cancelar</button></a>
                                     </div>
                                 </div>

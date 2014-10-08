@@ -22,7 +22,6 @@ endif;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-    <?php session_start(); ?>
     <head>
         <?php require_once './inc/head.php'; ?>
         <title>Sistema de Apoio a Dependencia</title>
@@ -52,11 +51,13 @@ endif;
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['perfil']; ?> <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
+                                <?php echo $_SESSION['perfil']; ?>
+                                <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-cog"></span>Editar Perfil</a></li>
                                 <li class="divider"></li>   
-                                <li><a href="logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out"> Sair </span></a></li>
+                                <li><a href="logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out">Sair</span></a></li>
                             </ul>
                         </li>
                     </ul>

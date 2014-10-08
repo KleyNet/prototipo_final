@@ -15,6 +15,27 @@
                 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+         <script>
+            $('#frmCadastroCurso').on('submit',function() {
+                $.ajax({
+                    url: 'bankscurso.php',
+                    datatype: 'json',
+                    data:'acao=controlando'
+                }).success(function() {
+                    $('#frmCadastroCurso').addClass("done");
+                    alert('Cadastrado Com Sucesso!');
+                
+                });
+            });
+//            document.getElementById("frmCadastroCurso").submit(function() {
+//                alert('Submit Feito');
+//                return false;
+//            });
+//        $('form').submit(function(){
+//            alert('Submit Feito');
+//            return false;
+//        })
+        </script>
     </head>
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -62,7 +83,9 @@
                             <h3><span class="glyphicon glyphicon-th-list"></span> Cadastro de Curso</h3>
                         </div>
 
-                        <form method="post" action="bankscurso.php?acao=controlando" class="form-horizontal" role="form">
+                        <!--<form method="post" action="bankscurso.php?acao=controlando" class="form-horizontal" role="form">-->
+                        <form  method="post" action="" id="frmCadastroCurso" class="form-horizontal" role="form" >
+                            
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
@@ -94,12 +117,12 @@
                                     <div class="form-group">
                                         <label for="numberCarga" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Carga Horária:</label>
                                         <div class="col-xs-6 col-sm-5 col-md-7 col-lg-5">
-                                            <input type="number" name="ch" class="form-control" id="inputCarga" required>
+                                            <input type="number" name="ch" class="form-control" id="inputCarga" required="">
                                         </div>
                                     </div>
 
                                     <div class="pull-right">
-                                        <button type="submit" class="btn btn-success">Cadastrar</button>
+                                        <button type="submit" class="btn btn-success btnCadastrarCurso">Cadastrar</button>
                                         <a href="javascript:window.history.go(-1)"><button type="submit" class="btn btn-warning">Cancelar</button></a>
                                     </div>
                                 </div>
@@ -110,5 +133,5 @@
             </div>
         </div>
         <?php include_once '../inc/rodape.php'; ?>
-    </body>
+   </body>
 </html>

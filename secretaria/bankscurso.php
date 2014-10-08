@@ -28,8 +28,8 @@ if ($_REQUEST["acao"] == "controlando")
     if (!$result) {
         die('Erro: ' . mysql_error());
     } else {
-        echo '<h2>Cadastrado com sucesso!<hr></h2>';
-
+        
+        echo 'CURSO CADASTRADO COM SUCESSO!';
         mysql_close();
 
         header("refresh: 3; url=cadastroCurso.php");
