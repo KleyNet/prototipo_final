@@ -28,7 +28,7 @@ if ($_REQUEST["acao"] == "controlando")
     if (!$result) {
         die('Erro: ' . mysql_error());
     } else {
-        
+
         echo 'CURSO CADASTRADO COM SUCESSO!';
         mysql_close();
 

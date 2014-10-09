@@ -15,27 +15,7 @@
                 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-         <script>
-            $('#frmCadastroCurso').on('submit',function() {
-                $.ajax({
-                    url: 'bankscurso.php',
-                    datatype: 'json',
-                    data:'acao=controlando'
-                }).success(function() {
-                    $('#frmCadastroCurso').addClass("done");
-                    alert('Cadastrado Com Sucesso!');
-                
-                });
-            });
-//            document.getElementById("frmCadastroCurso").submit(function() {
-//                alert('Submit Feito');
-//                return false;
-//            });
-//        $('form').submit(function(){
-//            alert('Submit Feito');
-//            return false;
-//        })
-        </script>
+
     </head>
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -84,8 +64,8 @@
                         </div>
 
                         <!--<form method="post" action="bankscurso.php?acao=controlando" class="form-horizontal" role="form">-->
-                        <form  method="post" action="" id="frmCadastroCurso" class="form-horizontal" role="form" >
-                            
+                        <form id="frmCadastroCurso" method="post" action="" class="form-horizontal" role="form" >
+
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
@@ -133,5 +113,37 @@
             </div>
         </div>
         <?php include_once '../inc/rodape.php'; ?>
-   </body>
+        <script>
+            $('form').on('submit', function() {
+            var objCriado = {nome:"$_REQUEST['nome']",orientador:"$_REQUEST['orientador']",selecTipo:"$_REQUEST['selectTipo']",ch:"$_REQUEST['ch']"};
+             $.ajax({
+            url: 'bankscurso.php?acao=controlando',
+            type:'post',
+            data: objCriado
+            }).success(function() {
+            $('form').addClass("done");
+                    alert('Cadastrado Com Sucesso!');
+            });
+                    });
+                    //        $.ajax({
+                    //      url: 'bankscurso.php',
+                    //    type: 'post',
+                    //   context:this,
+                    //   data:'?acao=controlando',
+                    // }).success(function() {
+                    //   $('form').addClass("done");
+                    //   alert('Cadastrado Com Sucesso!');
+
+          //  });
+          //  });
+//            document.getElementById("frmCadastroCurso").submit(function() {
+//                alert('Submit Feito');
+//                return false;
+//            });
+//        $('form').submit(function(){
+//            alert('Submit Feito');
+//            return false;
+//        })
+        </script>
+    </body>
 </html>

@@ -20,14 +20,14 @@ $select = @mysql_select_db($banco);
 
     if(@$_REQUEST['acao'] == "12345")
     {
-        $sql = "INSERT INTO notas (disciplina, curso, turmo, aluno, nota, frequencia) 
+        $sql = "INSERT INTO notas (disciplina, curso, turma, aluno, nota, frequencia) 
             VALUES(";
-        $sql .= "'".$_REQUEST['nome']."',";
-        $sql .= "'".$_REQUEST['date']."',";
-        $sql .= "'".$_REQUEST['hora']."',";
-        $sql .= "'".$_REQUEST['selectDisponibilidade']."',";
-        $sql .= "'".$_REQUEST['selectDependencia']."',";
-        $sql .= "'".$_REQUEST['selectHabilitado']."'";
+        $sql .= "'".$_REQUEST['selectDisciplina']."',";
+        $sql .= "'".$_REQUEST['selectCurso']."',";
+        $sql .= "'".$_REQUEST['selectTurma']."',";
+        $sql .= "'".$_REQUEST['selectAluno']."',";
+        $sql .= "'".$_REQUEST['selectNota']."',";
+        $sql .= "'".$_REQUEST['optionFreq']."'";
         $sql .= ")";
         
         $result = mysql_query($sql);

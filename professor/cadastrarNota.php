@@ -57,7 +57,7 @@
                             <h3><span class="glyphicon glyphicon-th-list"></span> Cadastrar Nota</h3>
                         </div>
 
-                        <form method="post" action="" class="form-horizontal" role="form">
+                        <form method="post" action="banksnota.php?acao=12345" class="form-horizontal" role="form">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group">
@@ -99,7 +99,7 @@
                                     <div class="form-group">
                                         <label for="inputNota" class="col-xs-6 col-sm-2 col-md-1 col-lg-2 control-label">Nota:</label>
                                         <div class="col-xs-6 col-sm-10 col-md-11 col-lg-10">
-                                            <input type="text" class="form-control" id="inputNota" required>
+                                            <input type="text" name="selectNota" class="form-control" id="inputNota" required>
                                         </div>
                                     </div>
 
