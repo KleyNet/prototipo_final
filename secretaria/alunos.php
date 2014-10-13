@@ -33,13 +33,14 @@
                         <li class="active"><a href="../secretaria/alunos.php">Alunos</a></li>
                         <li><a href="../secretaria/turmas.php">Turmas</a></li>
                         <li><a href="../secretaria/disciplinas.php">Disciplinas</a></li>
+                        <li><a href="../secretaria/cursos.php">Cursos</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#c" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['perfil']; ?> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Editar Perfil</a></li>
+                                <li><a href="../secretaria/alterarSenha.php"><span class="glyphicon glyphicon-cog"></span> Alterar Senha</a></li>
                                 <li class="divider"></li>
                                 <li><a href="../logado.php?logout=acessar">Sair <span class="glyphicon glyphicon-log-out"></span></a></li>
                             </ul>
@@ -64,13 +65,6 @@
                     </div>
 
                     <hr>
-
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <input type="search" id="container-search" class="form-control" placeholder="Pesquisar...">
-                        </div>
-                    </div>
-
                     <div class="table-responsive" id="table">
                         <table class="table bordered">
                             <thead class="h4">

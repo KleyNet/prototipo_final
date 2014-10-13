@@ -31,13 +31,12 @@
 
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<ul class="nav navbar-nav">
-
-                <li class="active"><a href="../secretaria/index.php">Home</a></li>
-                <li><a href="../secretaria/alunos.php">Alunos</a></li>
-                <li><a href="../secretaria/turmas.php">Turmas</a></li>
-                <li><a href="../secretaria/disciplinas.php">Disciplinas</a></li>
-                <li><a href="../secretaria/cursos.php">Cursos</a></li>
-             </ul>
+                    <li class="active"><a href="../secretaria/index.php">Home</a></li>
+                    <li><a href="../secretaria/alunos.php">Alunos</a></li>
+                    <li><a href="../secretaria/turmas.php">Turmas</a></li>
+                    <li><a href="../secretaria/disciplinas.php">Disciplinas</a></li>
+                    <li><a href="../secretaria/cursos.php">Cursos</a></li>
+                </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
     <?php session_start(); ?>
     <head>
         <?php include_once '../inc/head.php'; ?>
-
         <title>Cursos</title>
 
         <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +23,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="" class="navbar-brand">{Logo}</a>
+                    <a href="#" class="navbar-brand">{Logo}</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -38,11 +37,11 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><?php echo $_SESSION['perfil']; ?><span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?php echo $_SESSION['perfil']; ?><span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><span class="glyphicon glyphicon-cog"></span>Editar Perfil</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Alterar Senha</a></li>
                                 <li class="divider"></li>
-                                <li><a href="../logado.php?logout=acessar"><span class="glyphicon glyphicon-log-out"></span> Sair </a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -63,14 +62,14 @@
                                 <a href="../secretaria/cadastroCurso.php"><button type="button" class="btn btn-success">Novo Curso</button></a>
                             </div>
                         </div>
+
                         <hr>
 
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="search" id="container-search" class="form-control" placeholder="Search...">
+                                <input type="search" name="search" id="container-search" class="form-control" placeholder="Pesquisar..." onclick="getDados();">
                             </div>
                         </div>
-
                         <div class="table-responsive">
                             <table class="table bordered">
                                 <thead class="h4">
@@ -88,24 +87,8 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                    <div class="modal-dialog modal-sm">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Tem certeza que deseja remover essa turma?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                <button type="button.btn.btn-danger">Sim</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </tr>
+                                        <td><a href="../secretaria/editarCurso.php" type="button" class="btn btn-warning btn-xs">Editar</a></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -121,18 +104,30 @@
                     </div>
                 </div>
             </div>
-        </div>                      
-    </div>
-</div>
-</div>
-</div>
-<?php include_once '../inc/rodape.php'; ?>
-<script>
-    $(function() {
-        $('#table').searchable({
-            searchField: '#container-search',
-        })
-    });
-</script>
-</body>
+        </div>
+
+        <footer class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="copyright">
+                <div class="container container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>&copy; Todos os direitos reservados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery-searchable.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+
+        <script>
+                                    $(function() {
+                                        $('#table').searchable({
+                                            searchField: '#container-search'
+                                        });
+                                    });
+        </script>
+    </body>
 </html>

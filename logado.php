@@ -3,6 +3,17 @@ session_start();
 require_once "./classes/conexao.php";
 require_once "./classes/login.php";
 
+$perfil = $_SESSION['perfilUsuario'];
+        if ($perfil == 'Secretaria') {
+            $pagina = '../secretaria/index.php';
+            header('Location: ./secretaria/index.php');
+        } elseif ($perfil == 'Coordenador') {
+            $pagina = '../coordenador/index.php';
+            header('Location: ./coordenador/index.php');
+        } elseif ($perfil == 'Professor') {
+            $pagina = '../professor/index.php';
+            header('Location: /professor/index.php');
+        }
 if (isset($_GET['logout'])):
     if ($_GET['logout'] == 'acessar'):
         Login::deslogar();

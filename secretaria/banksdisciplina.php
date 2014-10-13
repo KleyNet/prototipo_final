@@ -1,7 +1,6 @@
 <?php
 #banco de dados para tabela curso
 #dados para conectar com o banco
-
 $servidor = 'localhost';
 $usuario = 'root';
 $senhaa = '1010';

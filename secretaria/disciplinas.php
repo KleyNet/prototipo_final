@@ -33,7 +33,7 @@
 					<li><a href="../secretaria/alunos.php">Alunos</a></li>
 					<li><a href="../secretaria/turmas.php">Turmas</a></li>
 					<li class="active"><a href="../secretaria/disciplinas.php">Disciplinas</a></li>
-                                        <li class="active"><a href="../secretaria/cursos.php">Curso</a></li>
+					<li><a href="../secretaria/cursos.php">Cursos</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -60,7 +60,7 @@
 
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                    <a href="../secretaria/cadastrodisciplina.php"><button type="button" class="btn btn-success">Nova Disciplina</button></a>
+							<a href="../secretaria/cadastrodisciplina.php"><button type="button" class="btn btn-success">Nova Disciplina</button></a>
 						</div>
 					</div>
 
@@ -89,23 +89,7 @@
 									<td>Trabalho de Conclusão de Curso II</td>
 									<td>Guilherme Parente Costa</td>
 									<td>Ativa</td>
-									<td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-									<div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-										<div class="modal-dialog modal-sm">
-											<div class="modal-content">
-												<div class="modal-header">
-													<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-												</div>
-												<div class="modal-body">
-													<p>Tem certeza que deseja remover essa disciplina?</p>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-													<button type="button" class="btn btn-danger">Sim</button>
-												</div>
-											</div>
-										</div>
-									</div>
+									<td><a href="../secretaria/editarDisciplina.php" type="button" class="btn btn-warning btn-xs">Editar</a></td>
 								</tr>
 							</tbody>
 						</table>

@@ -37,6 +37,7 @@ and open the template in the editor.
                         <li><a href="../coordenador/alunos.php">Alunos</a></li>
                         <li><a href="../coordenador/turmas.php">Turmas</a></li>
                         <li><a href="../coordenador/disciplinas.php">Disciplinas</a></li>
+                        <li><a href="../coordenador/cursos.php">Cursos</a></li>
                         <li class="active"><a href="../coordenador/usuarios.php">Usuários</a></li>
                     </ul>
 
@@ -80,7 +81,7 @@ and open the template in the editor.
                             <table class="table table-striped bordered">
                                 <thead class="h4">
                                     <tr>
-                                        <th>Nome <span id="pesquisa" style="color:black; cursor:pointer;"><span class="glyphicon glyphicon-search"></span></span></th>
+                                        <th>Nome</th>
                                         <th>Função</th>
                                         <th>Ação</th>
                                     </tr>
@@ -89,24 +90,24 @@ and open the template in the editor.
                                     <tr>
                                         <td>Guilherme Parente Costa</td>
                                         <td>Professor</td>
-                                        <td><button type="button" class="btn btn-warning btn-xs">Editar</button> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
-                                <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
-                                    <div class="modal-dialog modal-sm">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Tem certeza que deseja remover esse usuário?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
-                                                <button type="button" class="btn btn-danger">Sim</button>
+                                        <td><a href="../coordenador/editarUsuario.php" type="button" class="btn btn-warning btn-xs">Editar</a> <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modal-delete">Excluir</button></td>
+                                        <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modal-delete" aria-hidden="true">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Sair</span></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Tem certeza que deseja remover esse usuário?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
+                                                        <button type="button" class="btn btn-danger">Sim</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                </tr>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
