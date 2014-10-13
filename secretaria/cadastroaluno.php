@@ -63,14 +63,14 @@
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <div class="form-group row">
-                                        <label for="inputRa" class="col-md-1 control-label">RA:</label>
+                                        <label for="inputRa"  class="col-md-1 control-label">RA:</label>
                                         <div class="col-md-2">
-                                            <input type="text" class="form-control" id="inputRa" required>
+                                            <input type="text" name="ra" class="form-control" maxlength="12" id="inputRa" required>
                                         </div>
 
-                                        <label for="inputName" class="col-md-1 control-label">Nome:</label>
+                                        <label for="inputName"  class="col-md-1 control-label">Nome:</label>
                                         <div class="col-md-5">
-                                            <input type="text" class="form-control" id="inputName" required>
+                                            <input type="text" name="nome" class="form-control" maxlength="50" id="inputName" required>
                                         </div>
                                     </div>
                                     <label for="selectCurso" class="col-md-1 control-label">Curso:</label>
@@ -111,7 +111,7 @@
                                 <div class="form-group row">
                                     <label for="inputPhone" class="col-md-1 control-label">Telefone:</label>
                                     <div class="col-md-2">
-                                        <input type="phone" class="form-control" id="inputPhone" name="telefone" placeholder="00-0000-0000" maxlength="12" required="" onkeypress="formatar('##-####-####', this);" required />
+                                        <input type="phone" name="telefone" class="form-control" id="inputPhone"  placeholder="00-0000-0000" maxlength="12" required="" onkeypress="formatar('##-####-####', this);" required />
                                     </div>
 
                                     <label for="sexo" class="col-md-1 control-label">Sexo:</label>
@@ -126,7 +126,7 @@
                                 <div class="form-group row">
                                     <label for="inputNasc" class="col-md-1 control-label">Nascimento:</label>
                                     <div class="col-md-2">
-                                        <input type="date" class="form-control" id="inputNac" required>
+                                        <input type="date" name="date" class="form-control" id="inputNac" required>
                                     </div>
 
                                 </div>

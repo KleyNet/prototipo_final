@@ -34,11 +34,11 @@ $select = @mysql_select_db($banco);
             VALUES(";
         $sql .= "'".$_REQUEST['nome']."',";
         $sql .= "'".$_REQUEST['curso']."',";
-        $sql .= "'".$_REQUEST['matricula']."',";
+        $sql .= "'".$_REQUEST["ra"]."',";
         $sql .= "'".$_REQUEST['semestre']."',";
         $sql .= "'".$_REQUEST["telefone"]."',";
-        $sql .= "'".$_REQUEST['optionSexo']."',";
-        $sql .= "'".$_REQUEST['date']."',";
+        $sql .= "'".$_REQUEST['sexo']."',";
+        $sql .= "'".$_REQUEST["date"]."',";
         $sql .= "'".$_REQUEST['email']."'";
         $sql .= ")";
         
